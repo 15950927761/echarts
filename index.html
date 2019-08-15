@@ -1,0 +1,801 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>天环昆山智慧园区显示系统</title>
+<script src="js/jquery1.42.min.js"></script>
+<script src="js/jquery.SuperSlide.2.1.1.js"></script>
+<script src="js/echarts.common.min.js"></script>
+<link href="css/style.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="wrapper-title">
+			<div class="logo"><img src="images/logo.png"></div>
+			<div class="title"><img src="images/t1.png"></div>
+			<div class="date">2019年1月5日 14:37:52</div>
+			<div class="clearboth"></div>
+		</div>
+		<div class="wrapper-top">
+			<div class="wt-left">
+				<div class="wt1">
+					<em>司机预约履约情况：</em>
+					<div class="wt-number">46/<span>166(次)</span></span></div>
+					<div class="square square1"><img src="images/tp2.jpg"></div>
+					<div class="square square2"><img src="images/tp2.jpg"></div>
+					<div class="square square3"><img src="images/tp2.jpg"></div>
+					<div class="square square4"><img src="images/tp2.jpg"></div>
+				</div>
+				<div class="wt1 wt1-week">
+					<div class="wt1-title"><img src="images/t3.png"></div>
+					<div id="week-echarts" style="height:470px;position:relative;">
+					</div>
+					<div class="square square1"><img src="images/tp2.jpg"></div>
+					<div class="square square2"><img src="images/tp2.jpg"></div>
+					<div class="square square3"><img src="images/tp2.jpg"></div>
+					<div class="square square4"><img src="images/tp2.jpg"></div>
+				</div>
+			</div>
+			<div class="wt-mid">
+				<div class="wt1 wt2">
+					<div class="wt2-bg"></div>
+					<div class="wt2-title"><img src="images/t4.png"></div>
+					<div class="wt2-table">
+						<table>
+							<thead>
+								<tr>
+									<th width="80">
+										<div class="line"></div>
+										<span class="s1">库号</span>
+										<span class="s2">状态</span>
+									</th>
+									<th>1号库</th>
+									<th>2号库</th>
+									<th>3号库</th>
+									<th>4号库</th>
+									<th>5号库</th>
+									<th>合计</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="tr-red">
+									<td>使用中</td>
+									<td>
+										<dl>
+											<dd>33</dd>
+											<dd class="noborder">50.7%</dd>
+										</dl>
+									</td>
+									<td>
+										<dl>
+											<dd>33</dd>
+											<dd class="noborder">50.7%</dd>
+										</dl>
+									</td>
+									<td>
+										<dl>
+											<dd>33</dd>
+											<dd class="noborder">50.7%</dd>
+										</dl>
+									</td>
+									<td>
+										<dl>
+											<dd>33</dd>
+											<dd class="noborder">50.7%</dd>
+										</dl>
+									</td>
+									<td>
+										<dl>
+											<dd>33</dd>
+											<dd class="noborder">50.7%</dd>
+										</dl>
+									</td>
+									<td class="font-white">
+										<dl>
+											<dd>116</dd>
+											<dd class="noborder">50.7%</dd>
+										</dl>
+									</td>
+								</tr>
+								<tr class="tr-yellow">
+									<td>已预约</td>
+									<td>
+										<dl>
+											<dd>33</dd>
+											<dd class="noborder">50.7%</dd>
+										</dl>
+									</td>
+									<td>
+										<dl>
+											<dd>33</dd>
+											<dd class="noborder">50.7%</dd>
+										</dl>
+									</td>
+									<td>
+										<dl>
+											<dd>33</dd>
+											<dd class="noborder">50.7%</dd>
+										</dl>
+									</td>
+									<td>
+										<dl>
+											<dd>33</dd>
+											<dd class="noborder">50.7%</dd>
+										</dl>
+									</td>
+									<td>
+										<dl>
+											<dd>33</dd>
+											<dd class="noborder">50.7%</dd>
+										</dl>
+									</td>
+									<td class="font-white">
+										<dl>
+											<dd>116</dd>
+											<dd class="noborder">50.7%</dd>
+										</dl>
+									</td>
+								</tr>
+								<tr class="tr-blue">
+									<td>空闲中</td>
+									<td>
+										<dl>
+											<dd>33</dd>
+											<dd class="noborder">50.7%</dd>
+										</dl>
+									</td>
+									<td>
+										<dl>
+											<dd>33</dd>
+											<dd class="noborder">50.7%</dd>
+										</dl>
+									</td>
+									<td>
+										<dl>
+											<dd>33</dd>
+											<dd class="noborder">50.7%</dd>
+										</dl>
+									</td>
+									<td>
+										<dl>
+											<dd>33</dd>
+											<dd class="noborder">50.7%</dd>
+										</dl>
+									</td>
+									<td>
+										<dl>
+											<dd>33</dd>
+											<dd class="noborder">50.7%</dd>
+										</dl>
+									</td>
+									<td class="font-white">
+										<dl>
+											<dd>116</dd>
+											<dd class="noborder">50.7%</dd>
+										</dl>
+									</td>
+								</tr>
+								<tr>
+									<td>合计</td>
+									<td>66</td>
+									<td>66</td>
+									<td>34</td>
+									<td>35</td>
+									<td>48</td>
+									<td>246</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="wt2-bottom">
+						<div class="wt2-box mr">
+							<div class="wt2-title2">专线月台</div>
+						</div>
+						<div class="wt2-box">
+							<div class="wt2-line">
+								<div class="wt2-img"><img src="images/jt4.png" class="jt2"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/jt4.png" class="jt2"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/jt4.png" class="jt2"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/jt4.png" class="jt2"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+							</div>
+							<div class="clearboth"></div>
+							<div class="wt2-content">六号仓库</div>
+							<div class="wt2-line wt2-line2">
+								<div class="wt2-img"><img src="images/jt1.png" class="jt"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/jt1.png" class="jt"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/jt1.png" class="jt"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+							</div>
+						</div>
+						<div class="wt2-box mr">
+							<div class="wt2-line">
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+							</div>
+							<div class="clearboth"></div>
+							<div class="wt2-content">三号仓库</div>
+							<div class="wt2-line wt2-line2">
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+							</div>
+						</div>
+						<div class="wt2-box">
+							<div class="wt2-line">
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+							</div>
+							<div class="clearboth"></div>
+							<div class="wt2-content">四号仓库</div>
+							<div class="wt2-line wt2-line2">
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+							</div>
+						</div>
+						<div class="wt2-box mr">
+							<div class="wt2-line">
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+							</div>
+							<div class="clearboth"></div>
+							<div class="wt2-content">一号仓库</div>
+							<div class="wt2-line wt2-line2">
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+							</div>
+						</div>
+						<div class="wt2-box">
+							<div class="wt2-line">
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+							</div>
+							<div class="clearboth"></div>
+							<div class="wt2-content">二号仓库</div>
+							<div class="wt2-line wt2-line2">
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon2.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon3.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+								<div class="wt2-img"><img src="images/icon1.png"></div>
+							</div>
+						</div>
+						<div class="clearboth"></div>
+					</div>
+					<div class="square square1"><img src="images/tp2.jpg"></div>
+					<div class="square square2"><img src="images/tp2.jpg"></div>
+					<div class="square square3"><img src="images/tp2.jpg"></div>
+					<div class="square square4"><img src="images/tp2.jpg"></div>
+				</div>
+			</div>
+			<div class="wt-right">
+				<div class="wt1 wt2">
+					<div class="wt2-title3"><img src="images/t5.png"></div>
+					<div class="wt2-title4">
+						<h3>专线车辆</h3>
+						<ul>
+							<li>专线车辆</li>
+							<li>专车车辆</li>
+							<li>散线车辆</li>
+						</ul>
+					</div>
+					<div class="carList">
+						<div class="txtScroll-left">
+							<div class="hd">
+								<a class="next"></a>
+								<a class="prev"></a>
+							</div>
+							<div class="bd">
+								<ul>
+									<li>
+										<table>
+										<thead>
+											<tr>
+												<th>线路名称</th>
+												<th>车辆</th>
+												<th>线路名称</th>
+												<th>车辆</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="tr-red">南京线</td>
+												<td class="tr-red">168</td>
+												<td>太原线</td>
+												<td>168</td>
+											</tr>
+											<tr>
+												<td class="tr-yellow">苏州线</td>
+												<td class="tr-yellow">128</td>
+												<td>西安线</td>
+												<td>168</td>
+											</tr>
+											<tr>
+												<td class="tr-blue2">太仓线</td>
+												<td class="tr-blue2">116</td>
+												<td>晋中线</td>
+												<td>168</td>
+											</tr>
+											<tr>
+												<td>扬州线</td>
+												<td>113</td>
+												<td>济南线</td>
+												<td>168</td>
+											</tr>
+											<tr>
+												<td>嘉定线</td>
+												<td>96</td>
+												<td>石家庄线</td>
+												<td>168</td>
+											</tr>
+											<tr>
+												<td>湖州线</td>
+												<td>168</td>
+												<td>连云港线</td>
+												<td>123</td>
+											</tr>
+											<tr>
+												<td>宁波线</td>
+												<td>112</td>
+												<td>福建线</td>
+												<td>168</td>
+											</tr>
+											<tr>
+												<td>徐州线</td>
+												<td>234</td>
+												<td>广州线</td>
+												<td>234</td>
+											</tr>
+											<tr>
+												<td>常熟线</td>
+												<td>123</td>
+												<td>深圳线</td>
+												<td>342</td>
+											</tr>
+											<tr>
+												<td>杭州线</td>
+												<td>123</td>
+												<td>潮汕线</td>
+												<td>231</td>
+											</tr>
+											<tr>
+												<td>临汾线</td>
+												<td>123</td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>大同线</td>
+												<td>168</td>
+												<td></td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+									</li>
+									<li>
+										<table>
+										<thead>
+											<tr>
+												<th>线路名称</th>
+												<th>车辆</th>
+												<th>线路名称</th>
+												<th>车辆</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>南京线</td>
+												<td>168</td>
+												<td>太原线</td>
+												<td>168</td>
+											</tr>
+											<tr>
+												<td>苏州线</td>
+												<td>128</td>
+												<td>西安线</td>
+												<td>168</td>
+											</tr>
+											<tr>
+												<td>太仓线</td>
+												<td>116</td>
+												<td>晋中线</td>
+												<td>168</td>
+											</tr>
+											<tr>
+												<td>扬州线</td>
+												<td>113</td>
+												<td>济南线</td>
+												<td>168</td>
+											</tr>
+											<tr>
+												<td>嘉定线</td>
+												<td>96</td>
+												<td>石家庄线</td>
+												<td>168</td>
+											</tr>
+											<tr>
+												<td>湖州线</td>
+												<td>168</td>
+												<td>连云港线</td>
+												<td>123</td>
+											</tr>
+											<tr>
+												<td>宁波线</td>
+												<td>112</td>
+												<td>福建线</td>
+												<td>168</td>
+											</tr>
+											<tr>
+												<td>徐州线</td>
+												<td>234</td>
+												<td>广州线</td>
+												<td>234</td>
+											</tr>
+											<tr>
+												<td>常熟线</td>
+												<td>123</td>
+												<td>深圳线</td>
+												<td>342</td>
+											</tr>
+											<tr>
+												<td>杭州线</td>
+												<td>123</td>
+												<td>潮汕线</td>
+												<td>231</td>
+											</tr>
+											<tr>
+												<td>临汾线</td>
+												<td>123</td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>大同线</td>
+												<td>168</td>
+												<td></td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<script type="text/javascript">
+						 jQuery(".txtScroll-left").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"left",pnLoop:false,trigger:"click"});
+						</script>
+					</div>
+					<div class="square square1"><img src="images/tp2.jpg"></div>
+					<div class="square square2"><img src="images/tp2.jpg"></div>
+					<div class="square square3"><img src="images/tp2.jpg"></div>
+					<div class="square square4"><img src="images/tp2.jpg"></div>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper-bottom">
+		<!-- 各仓库今日开单详情开始 -->
+			<div class="wb-left">
+				<div class="wt1 wt1-warehouse">
+					<div class="wt1-title4"><img src="images/t6.png"></div>
+					<div class="wt-lt">
+						<div class="wt-bg"></div>
+						<div class="wt-wz">昨日开单总量：<span>3</span><span>3</span><span>1</span><span>6</span>(吨)</div>
+					</div>
+					<div class="wt-rt">
+						<div class="wt-bg"></div>
+						<div class="wt-wz">今日开单总量：<span>3</span><span>3</span><span>1</span><span>6</span>(吨)</div>
+					</div>
+					<div id="warehouse"></div>
+					<div class="square square1"><img src="images/tp2.jpg"></div>
+					<div class="square square2"><img src="images/tp2.jpg"></div>
+					<div class="square square3"><img src="images/tp2.jpg"></div>
+					<div class="square square4"><img src="images/tp2.jpg"></div>
+				</div>
+			</div>
+			<!-- 各仓库今日开单详情结束 -->
+			<!-- 今日车辆入园信息开始 -->
+			<div class="wb-left wb-right">
+				<div class="wt1 wt1-warehouse">
+					<div class="wt1-title4"><img src="images/t7.png"></div>
+					<div id="carenter"></div>
+					<div class="square square1"><img src="images/tp2.jpg"></div>
+					<div class="square square2"><img src="images/tp2.jpg"></div>
+					<div class="square square3"><img src="images/tp2.jpg"></div>
+					<div class="square square4"><img src="images/tp2.jpg"></div>
+				</div>
+			</div>
+			<!-- 今日车辆入园信息结束 -->
+		</div>
+	</div>
+	<script src="js/echarts.list.js"></script>
+	<script>
+		$(function(){
+			$('.wt2-title4 h3').click(function(){
+				$(this).next('ul').toggle();
+			})
+			$('.wt2-title4 ul li').click(function(){
+				$('.wt2-title4 h3').html($(this).html());
+				$('.wt2-title4 ul').hide();
+				var divName = $(this).attr('id');
+				$(".car").hide();
+				$('.'+divName).show();
+			})
+		})
+	</script>
+</body>
+</html>
